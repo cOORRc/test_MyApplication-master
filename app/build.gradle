@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.test_myapplication"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 11
+        versionName "2.1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/com/example/test_myapplication/RecycleView']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    androidTestImplementation 'androidx.test:rules:1.3.0-alpha03'
+
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+
+    //pin
+    implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
+
+    implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+
+    //pin mukeshsolanki
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-compat:25.1.1'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    //PFLockScreen-Android
+    implementation 'com.github.thealeksandr:PFLockScreen-Android:1.0.0-beta7'
+
+    //PinLockView
+    implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
+
+    //BlurLockView
+    implementation 'com.nightonke:blurlockview:1.0.0'
+
+}

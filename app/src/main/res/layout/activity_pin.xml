@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/number"/>
+<!--    app:forceKeyboard="true"-->
+
+
+<!--    <com.goodiebag.pinview.Pinview-->
+<!--        android:id="@+id/pinview1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cursorVisible="false"-->
+<!--        app:hint=""-->
+<!--        app:inputType="number"-->
+<!--        app:password="true"-->
+<!--        app:pinBackground="@drawable/bg_pin"-->
+<!--        app:pinHeight="40dp"-->
+<!--        app:pinLength="4"-->
+<!--        app:pinWidth="40dp" />-->
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/txt_pin_entry2"
+        android:layout_width="180dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColor="@android:color/transparent"
+        android:textIsSelectable="false"
+        android:textSize="0px"
+        android:visibility="visible"
+        app:pinBackgroundDrawable="@drawable/bg_pin_round"
+        app:pinCharacterSpacing="10dp"
+        app:pinBackgroundIsSquare="true"
+        app:pinLineColors="@color/pin_line_colors"  />
+
+    <ImageView
+        android:id="@+id/imgvw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_gps_not_fixed_black_24dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+
+</LinearLayout>

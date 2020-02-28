@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.test_myapplication">
+
+<!-- <manifest xmlns:tools="http://schemas.android.com/tools">   <uses-sdk tools:overrideLibrary="com.nightonke.blurlockview"/> -->
+    <uses-sdk tools:overrideLibrary="com.nightonke.blurlockview"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".pin.Pin_BlurLockView">
+        </activity>
+
+        <activity
+            android:name=".pin.pin_PFLockScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+
+        <activity android:name=".pin.otpView" />
+        <activity android:name=".pin.PinActivity"/>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".pin.PinViewText_Activity"  />
+        <activity android:name=".noti.NotificationActivity"/>
+        <activity android:name=".LifeCycle" />
+        <activity
+            android:name=".navi"
+            android:label="@string/title_activity_navi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recyclerV" />
+        <activity android:name=".jsArrLogin" />
+        <activity android:name=".loginT1" />
+        <activity android:name=".testing" />
+        <activity android:name=".api_image" />
+        <activity android:name=".getByVolley" />
+        <activity android:name=".login" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".urlimg" />
+    </application>
+
+</manifest>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recyclerV">
+
+    <TextView
+        android:id="@+id/ttt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ttt"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="search..." />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/bt_search"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignTop="@id/edittext"-->
+<!--        android:layout_alignEnd="@id/edittext"-->
+<!--        android:layout_alignRight="@id/edittext"-->
+<!--        android:layout_alignParentTop="false"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@android:drawable/ic_menu_search"-->
+<!--        android:onClick="onClick"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="#FCD0D0"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/edittext">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
